@@ -51,7 +51,10 @@ with open(path, "r") as filehandle:
                 while combo[int(chrachter)] != ':':
                     username += combo[chrachter]
                     chrachter += 1
-            pwd = combo[chrachter+1:]
+                space = chrachter
+                while combo[int(chrachter)] != ' ':
+                    space += 1
+                pwd = combo[chrachter+1:space]
             login(username, pwd)
         except:
             pass
