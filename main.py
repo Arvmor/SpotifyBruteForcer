@@ -52,7 +52,7 @@ with open(path, "r") as filehandle:
                     username += combo[chrachter]
                     chrachter += 1
                 space = chrachter
-                while combo[int(chrachter)] != ' ':
+                while combo[int(space)] != ' ':
                     space += 1
                 pwd = combo[chrachter+1:space]
             login(username, pwd)
